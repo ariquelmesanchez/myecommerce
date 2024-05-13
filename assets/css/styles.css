@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid_container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header header header header" "sidebar grilla grilla grilla" "footer footer footer footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 25px auto 25px;
+}
+.grid_container .header {
+  color: white;
+  grid-area: header;
+  background-color: rgb(6, 6, 97);
+  text-align: center;
+  justify-content: center;
+}
+.grid_container .sidebar {
+  grid-area: sidebar;
+  background-image: url(../imgs/fondosidebar.avif);
+}
+.grid_container .sidebar div {
+  padding: 10px;
+  display: flex;
+  min-height: auto;
+  flex-direction: column;
+  border-radius: 0;
+}
+.grid_container .sidebar div header {
+  font-weight: bold;
+}
+.grid_container .grilla {
+  padding: 15px;
+  display: grid;
+  grid-area: grilla;
+  grid-gap: 15px;
+  background-color: #039790;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+}
+.grid_container .grilla div {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  height: 450px;
+}
+.grid_container .footer {
+  color: white;
+  grid-area: footer;
+  background-color: rgb(6, 6, 97);
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
